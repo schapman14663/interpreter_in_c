@@ -11,4 +11,5 @@ writing it in C and, if possible, I'm going to interpret something else
 instead of the 'Monkey' Language that he uses in his book. I'm also going
 to be using a bunch of other resources, online and in text, such as "Effective C".
 
-
+## 24 Sep 2026
+I have not much time on my hands at the moment, but I have begun on defining tokens.
