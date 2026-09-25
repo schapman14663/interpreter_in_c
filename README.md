@@ -13,3 +13,30 @@ to be using a bunch of other resources, online and in text, such as "Effective C
 
 ## 24 Sep 2026
 I have not much time on my hands at the moment, but I have begun on defining tokens.
+
+## 25 Sep 2026
+Small update because as above, not a ton of time, and wrapping my head around
+setting up a lexer is a fun challenge, but a challenge. I think, because I'm 
+writing in C, the idea is to enumerate the tokens in some capacity so that
+they can be turned into something that can be given meaning that the computer
+can understand.
+
+In a sense I'm starting to imagine it as being some kind of overly verbose
+caveman translator, to the effect that something like:
+
+`let f = 82 + 91;`
+
+Turns into:
+
+{
+LET,
+IDENTIFIER("f"),
+EQUAL_SIGN,
+INTEGER(82),
+PLUS_SIGN,
+INTEGER(91),
+SEMI_COLON
+}
+
+
+
