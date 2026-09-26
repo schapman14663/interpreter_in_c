@@ -28,7 +28,7 @@ caveman translator, to the effect that something like:
 
 Turns into:
 
-{
+`{
 LET,
 IDENTIFIER("f"),
 EQUAL_SIGN,
@@ -36,7 +36,25 @@ INTEGER(82),
 PLUS_SIGN,
 INTEGER(91),
 SEMI_COLON
-}
+}`
 
+## 26 Sep 2026
+It's pretty frustrating to be on roughly the right track, then doubt yourself, 
+only to find confirmation that you are on the right track, as I have learned today
+when I tried to continue working on implementing the token list, as I thought that
+since an enum in C will just be a list of numbers that have a text representation, 
+that I would need to implement a struct that pair the enum with the name of the type
+as well as the literal value of that token. Then I doubted myself, read a bit of 
+'Crafting Interpreters' and discovered I was right, and I just need to work on/learn
+more about structs in C. 
 
+So yes, currently under the understanding that I need my tokens to be structs that
+look like this (-ish):
+
+`struct {
+  enum,
+  line,
+  name of token,
+  literal value of token
+};`
 
