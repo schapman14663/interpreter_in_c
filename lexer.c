@@ -11,13 +11,11 @@
 
 */
 struct token {
-  enum tokentype; // As below, this is the kind of token the lexer/scanner has
-                  // found as its enum
-  // int line; // This will be the number of the line that the token is on, but
-  // I'll sort this later
-  char lexeme[];  // This is the string format name of the token i.e. the enum
-                  // for INT will have the lexeme "INT"
-  char literal[]; // The literal piece of text in the code, i.e. an int might
+  int line;       // This will be the number of the line that the token is on
+  int column;     // This will be the number of the column that the token is on
+                  // (first character)
+  enum tokentype; // As below, this is the kind of token found
+  char value[];   // The literal piece of text in the code, i.e. an int might
                   // literally be the number 7
 };
 
@@ -41,3 +39,5 @@ enum tokentype {
   FUNCTION,
   LET,
 };
+
+// TODO: Switch for tokentypes to unwrap the enum from values to their names.
