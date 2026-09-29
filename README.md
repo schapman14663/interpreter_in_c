@@ -28,15 +28,15 @@ caveman translator, to the effect that something like:
 
 Turns into:
 
-`{\n 
-LET, \n 
-IDENTIFIER("f"), \n 
-EQUAL_SIGN, \n 
-INTEGER(82), \n 
-PLUS_SIGN, \n 
-INTEGER(91), \n 
-SEMI_COLON \n 
-}`
+`{  
+LET,  
+IDENTIFIER("f"),  
+EQUAL_SIGN,  
+INTEGER(82),  
+PLUS_SIGN, \n  
+INTEGER(91), \n  
+SEMI_COLON \n  
+}`  
 
 ## 26 Sep 2026
 It's pretty frustrating to be on roughly the right track, then doubt yourself, 
@@ -51,25 +51,28 @@ more about structs in C.
 So yes, currently under the understanding that I need my tokens to be structs that
 look like this (-ish):
 
-`struct { \n 
-  enum, \n 
-  line, \n 
-  name of token, \n 
-  literal value of token \n 
-};`
+`struct {  
+  enum,   
+  line,   
+  name of token,   
+  literal value of token    
+};`  
 
 ## 27 Sep 2026
 I believe, I may have over thought the struct, I'm not sure I actually need the name 
 oft he token, which would mean the struct would look more like this:
 
-`struct { \n 
-  line, \n 
-  column \n 
-  enum, \n 
-  value \n 
+`struct {    
+  line,   
+  column   
+  enum,    
+  value    
 }` 
 
 And the reason for this layout is because the value is (potentially) a char[] (string)
 of an unknown length and therefore size (in memory), so at the moment it should be the
 case that this struct uses a neat arrangement of memory with as few gaps as possible.
 I might have declared the enum part of the struct itself incorrectly, but it will be fixed.
+
+## 28 Sep 2026
+I did manage to get some progress made, as I started mapping out the switch for the lexer.
