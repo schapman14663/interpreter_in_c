@@ -24,11 +24,11 @@ can understand.
 In a sense I'm starting to imagine it as being some kind of overly verbose
 caveman translator, to the effect that something like:
 
-`let f = 82 + 91;`
+```let f = 82 + 91;```
 
 Turns into:
 
-`{  
+```{  
 LET,  
 IDENTIFIER("f"),  
 EQUAL_SIGN,  
@@ -36,7 +36,7 @@ INTEGER(82),
 PLUS_SIGN, \n  
 INTEGER(91), \n  
 SEMI_COLON \n  
-}`  
+}```  
 
 ## 26 Sep 2026
 It's pretty frustrating to be on roughly the right track, then doubt yourself, 
@@ -51,23 +51,23 @@ more about structs in C.
 So yes, currently under the understanding that I need my tokens to be structs that
 look like this (-ish):
 
-`struct {  
+```struct {  
   enum,   
   line,   
   name of token,   
   literal value of token    
-};`  
+};```  
 
 ## 27 Sep 2026
 I believe, I may have over thought the struct, I'm not sure I actually need the name 
 oft he token, which would mean the struct would look more like this:
 
-`struct {    
+```struct {    
   line,   
   column   
   enum,    
   value    
-}` 
+}``` 
 
 And the reason for this layout is because the value is (potentially) a char[] (string)
 of an unknown length and therefore size (in memory), so at the moment it should be the
