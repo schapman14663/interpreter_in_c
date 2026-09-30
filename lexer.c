@@ -45,4 +45,40 @@ case 'ILLEGAL':
 case 'EOF':
   printf("EOF");
   break;
+case 'IDENT':
+  printf("IDENT");
+  break;
+case 'INT':
+  printf("INT");
+  break;
+case 'ASSIGN':
+  printf("ASSIGN");
+  break;
+case 'PLUS':
+  printf("PLUS");
+  break;
+case 'COMMA':
+  printf("COMMA");
+  break;
+case 'SEMI_COLON':
+  printf("SEMI_COLON");
+  break;
+case 'LPAREN':
+  printf("LPAREN");
+  break;
+case 'RPAREN':
+  printf("RPAREN");
+  break;
+case 'LBRACE':
+  printf("LBRACE");
+  break;
+case 'RBRACE':
+  printf("RBRACE");
+  break;
+case 'FUNCTION':
+  printf("FUNCTION");
+  break;
+case 'LET':
+  printf("LET");
+  break;
 }

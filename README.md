@@ -82,3 +82,6 @@ I might have declared the enum part of the struct itself incorrectly, but it wil
 
 ## 28 Sep 2026
 I did manage to get some progress made, as I started mapping out the switch for the lexer.
+
+## 29 and 30 Sep 2026
+More mapping of the switch.
